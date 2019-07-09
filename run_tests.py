@@ -22,7 +22,7 @@ def main(args):
     ftpFuncs.downBetw2dates("ufpr",4,5,2018,6,5,2018,outPath)
 
     #de um arquivo:
-    ftpFuncs.downloadFromList("/home/kaue2/Dropbox/Kelvin/RBMC_dowload/samples/for_download.csv")
+    ftpFuncs.downloadFromList("samples/for_download.csv")
 
 
     """FIM"""

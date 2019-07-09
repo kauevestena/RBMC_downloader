@@ -297,8 +297,8 @@ def download_date_plus_days(station_name,dDay,dMonth,dYear,DAYS,outPath,rinex3=F
             print("data final inválida")
             return
     except:
-        return
         print("data final inválida")
+        return
 
     downBetw2dates(station_name,dDay,dMonth,dYear,date2.day,date2.month,date2.year,outPath,rinex3,download_all)
 
@@ -324,9 +324,11 @@ def download_date_minus_days(station_name,dDay,dMonth,dYear,DAYS,outPath,rinex3=
 def downloadFromList(listPath):
     """"
     
-    faz o download a partir de um csv de entrada com a seguinte formatação:
+    faz o download a partir de um csv de entrada com os seguintes campos*:
     
     estacao,dia,mes,ano,caminho,rinex3?(bool, opcional),baixar todas?(bool, opcional)
+
+    *: para campos opcionais, inserir na lista inteira
 
     """
     file = open(listPath,"r")
